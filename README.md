@@ -7,7 +7,7 @@ Ciencia de Datos, Q-LAB PUCP) · **Autor:** Frank Pinares Gutiérrez
 |---|---|
 | Dashboard público e interactivo | **https://saffron29.github.io/tarea_3/** |
 | Reel de divulgación (67 s, 1080 × 1920) | [`reel/reel.mp4`](reel/reel.mp4) |
-| Publicación de LinkedIn | *(se añadirá el enlace una vez publicada)* |
+| Reel en línea (en lugar de LinkedIn, ver la sección 6) | **https://saffron29.github.io/tarea_3/reel.mp4** |
 | Repositorio | https://github.com/saffron29/tarea_3 |
 
 ![Vista nacional del dashboard](figuras/dashboard_nacional.png)
@@ -138,7 +138,12 @@ sin mapa.
 
 - **Dashboard:** https://saffron29.github.io/tarea_3/ (código en [`web/`](web/))
 - **Reel:** [`reel/reel.mp4`](reel/reel.mp4), con su guion ([`reel/guion.json`](reel/guion.json)) y subtítulos ([`reel/subtitulos.srt`](reel/subtitulos.srt))
-- **Publicación de LinkedIn:** *(se añadirá el enlace una vez publicada)*
+- **Reel en línea:** https://saffron29.github.io/tarea_3/reel.mp4 (se reproduce en el navegador, sin permisos)
+
+Debe precisarse que, por decisión del autor, esta versión no se publicó en LinkedIn. En su lugar, se siguió la
+alternativa que el enunciado prevé: el reel puede verse públicamente en el enlace anterior y el presente README incluye
+dos imágenes del dashboard (al inicio y en la sección 2) y los tres hallazgos principales (sección 4). El texto preparado para
+una futura publicación se encuentra en [`reel/posts.md`](reel/posts.md).
 
 ## 7. Cómo reproducir el proyecto
 

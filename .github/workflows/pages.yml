@@ -1,10 +1,10 @@
-# Publica el dashboard (carpeta web/) en GitHub Pages cada vez que cambia en main.
+# Publica el dashboard (carpeta web/) y el reel en GitHub Pages cada vez que cambian en main.
 name: Publicar el dashboard
 
 on:
   push:
     branches: [main]
-    paths: ["web/**", ".github/workflows/pages.yml"]
+    paths: ["web/**", "reel/reel.mp4", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -24,6 +24,9 @@ jobs:
       url: ${{ steps.despliegue.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      # El reel se copia al sitio para verlo en el navegador sin descargarlo (no se duplica en el repositorio)
+      - name: Añadir el reel al sitio
+        run: cp reel/reel.mp4 web/reel.mp4
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
