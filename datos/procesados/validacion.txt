@@ -1,0 +1,31 @@
+[1.ª vuelta] mesas: 86,488; duplicadas: 0
+[1.ª vuelta] estado de las actas: ACTA ELECTORAL NORMAL = 81,924, ACTA ELECTORAL RESUELTA = 4,065, MESA NO INSTALADA = 499
+[1.ª vuelta] mesas donde votaron más que los electores hábiles: 0
+[1.ª vuelta] mesas donde la suma de votos difiere de los votantes: 0
+[1.ª vuelta] nombres que aún tienen «¿»: 0
+[2.ª vuelta] mesas: 86,488; duplicadas: 0
+[2.ª vuelta] estado de las actas: CONTABILIZADA = 84,863, COMPUTADA RESUELTA = 1,386, ANULADA = 213, EN PROCESO = 20, SIN INSTALAR = 6
+[2.ª vuelta] mesas donde votaron más que los electores hábiles: 0
+[2.ª vuelta] mesas donde la suma de votos difiere de los votantes: 0
+[2.ª vuelta] nombres que aún tienen «¿»: 0
+Mesas con distinto número de electores hábiles entre vueltas: 358 (total 1.ª = 25,287,954; total 2.ª = 25,287,954)
+
+Primera vuelta (base abierta frente a ONPE al 100%):
+  PL: 2,724,752 frente a 2,724,752 (diferencia +0)
+  FP: 1,930,762 frente a 1,930,762 (diferencia +0)
+  RP: 1,692,279 frente a 1,692,279 (diferencia +0)
+  AVP: 1,674,201 frente a 1,674,201 (diferencia +0)
+  votos válidos: 14,400,630; Perú Libre = 18.921% y Fuerza Popular = 13.407% de los válidos
+
+Segunda vuelta (base abierta frente a la proclamación del JNE):
+  PL: 8,835,970 frente a 8,836,380 (diferencia -410)
+  FP: 8,791,730 frente a 8,792,117 (diferencia -387)
+  validos: 17,627,700 frente a 17,628,497 (diferencia -797)
+  blancos: 121,478 frente a 121,489 (diferencia -11)
+  nulos: 1,107,640 frente a 1,106,816 (diferencia +824)
+  Perú Libre = 50.125% de los válidos (JNE: 50.126%)
+  electores hábiles: 25,287,954
+
+Distritos del Perú: 1,874; países del extranjero: 77
+Distritos sin pobreza 2018 en la equivalencia: 0
+Pobreza ENAHO 2020 (sumaria, 34,490 hogares, factor07 × mieperho): 30.1% (INEI: 30.1%)

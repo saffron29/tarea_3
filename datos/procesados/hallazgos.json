@@ -1,0 +1,198 @@
+{
+  "nacional": {
+    "electores": 25287954,
+    "mesas": 86488,
+    "distritos": 1874,
+    "provincias": 196,
+    "paises": 77,
+    "emitidos_1v": 17713716,
+    "emitidos_2v": 18856818,
+    "participacion_1v": 70.04803947365612,
+    "participacion_2v": 74.56838145150058,
+    "validos_1v": 14400630,
+    "validos_2v": 17627700,
+    "blancos_1v": 2190059,
+    "blancos_2v": 121478,
+    "pct_blancos_1v": 12.363633920742547,
+    "pct_blancos_2v": 0.6442126131778967,
+    "PL_1v": 2724752,
+    "FP_1v": 1930762,
+    "pct_PL_1v": 18.921061092466093,
+    "pct_FP_1v": 13.40748286706901,
+    "PL_2v": 8835970,
+    "FP_2v": 8791730,
+    "pct_PL_2v": 50.125484322968966,
+    "pct_FP_2v": 49.874515677031034,
+    "margen_2v": 44240,
+    "crecimiento_PL": 3.2428529275324873,
+    "crecimiento_FP": 4.553502710328876,
+    "oficial_JNE": {
+      "PL": 8836380,
+      "FP": 8792117,
+      "pct_PL": 50.126,
+      "pct_FP": 49.874,
+      "margen": 44263
+    }
+  },
+  "territorio": {
+    "departamentos_PL": 16,
+    "departamentos_FP": 9,
+    "lista_FP": [
+      "Callao",
+      "Tumbes",
+      "Lima",
+      "Piura",
+      "La Libertad",
+      "Lambayeque",
+      "Ica",
+      "Ucayali",
+      "Loreto"
+    ],
+    "max_PL": {
+      "departamento": "Puno",
+      "pct": 89.25592079076556
+    },
+    "max_FP": {
+      "departamento": "Callao",
+      "pct": 67.42450723132188
+    },
+    "lima": {
+      "pct_PL_2v": 35.357465273472314,
+      "pct_FP_2v": 64.64253472652769,
+      "v2_electores": 8322644.0
+    },
+    "distritos_PL": 1496,
+    "distritos_PL_80": 625,
+    "distritos_ganador_1v": {
+      "PL": 1259,
+      "FP": 362,
+      "AP": 67,
+      "APP": 48,
+      "AVP": 35,
+      "PNP": 34,
+      "JP": 32,
+      "RP": 17,
+      "PP": 9,
+      "VN": 7,
+      "SP": 4
+    },
+    "departamentos_ganador_1v": {
+      "PL": 16,
+      "FP": 7,
+      "APP": 1,
+      "AVP": 1
+    }
+  },
+  "margen": {
+    "peru_PL": 8723299,
+    "peru_FP": 8571142,
+    "margen_peru": 152157,
+    "pct_PL_peru": 50.43990146891709,
+    "ext_PL": 112671,
+    "ext_FP": 220588,
+    "margen_ext": -107917,
+    "pct_FP_ext": 66.19116062882023,
+    "participacion_ext_2v": 36.47221305613756,
+    "electores_ext": 997033,
+    "paises_mas_votantes": [
+      {
+        "pais": "ESTADOS UNIDOS DE AMERICA",
+        "v2_emitidos": 89501
+      },
+      {
+        "pais": "CHILE",
+        "v2_emitidos": 56178
+      },
+      {
+        "pais": "ESPAÑA",
+        "v2_emitidos": 54752
+      },
+      {
+        "pais": "ARGENTINA",
+        "v2_emitidos": 53955
+      },
+      {
+        "pais": "ITALIA",
+        "v2_emitidos": 43347
+      }
+    ]
+  },
+  "transferencia": {
+    "r_FP2v_FP_RP_AVP_1v": 0.9278766911061929,
+    "r_PL2v_PL1v": 0.841867948680883,
+    "pct_FP_RP_AVP_1v_nacional": 36.78479344306464
+  },
+  "pobreza": {
+    "r_pobreza2018_PL2v": 0.4384318131548431,
+    "r_idh2019_PL2v": -0.446424766146902,
+    "r_altitud_PL2v": 0.5858098235983998,
+    "r_pobreza2020_PL2v_departamentos": 0.33696250030452296,
+    "quintiles": [
+      {
+        "quintil": 1,
+        "pobreza_min": 0.06,
+        "pobreza_max": 18.31,
+        "distritos": 376,
+        "electores": 14106410,
+        "v2_PL": 4403958,
+        "v2_validos": 10364194,
+        "v1_PL": 1113046,
+        "v1_validos": 8874444,
+        "pct_PL_2v": 42.49,
+        "pct_PL_1v": 12.54
+      },
+      {
+        "quintil": 2,
+        "pobreza_min": 18.33,
+        "pobreza_max": 29.06,
+        "distritos": 374,
+        "electores": 4653729,
+        "v2_PL": 1763044,
+        "v2_validos": 3368801,
+        "v1_PL": 560877,
+        "v1_validos": 2789945,
+        "pct_PL_2v": 52.33,
+        "pct_PL_1v": 20.1
+      },
+      {
+        "quintil": 3,
+        "pobreza_min": 29.09,
+        "pobreza_max": 39.2,
+        "distritos": 374,
+        "electores": 2169748,
+        "v2_PL": 908913,
+        "v2_validos": 1454480,
+        "v1_PL": 337770,
+        "v1_validos": 1071717,
+        "pct_PL_2v": 62.49,
+        "pct_PL_1v": 31.52
+      },
+      {
+        "quintil": 4,
+        "pobreza_min": 39.2,
+        "pobreza_max": 49.52,
+        "distritos": 375,
+        "electores": 1649970,
+        "v2_PL": 842197,
+        "v2_validos": 1075276,
+        "v1_PL": 358029,
+        "v1_validos": 791291,
+        "pct_PL_2v": 78.32,
+        "pct_PL_1v": 45.25
+      },
+      {
+        "quintil": 5,
+        "pobreza_min": 49.54,
+        "pobreza_max": 81.26,
+        "distritos": 375,
+        "electores": 1711064,
+        "v2_PL": 805187,
+        "v2_validos": 1031690,
+        "v1_PL": 344430,
+        "v1_validos": 711660,
+        "pct_PL_2v": 78.05,
+        "pct_PL_1v": 48.4
+      }
+    ]
+  }
+}

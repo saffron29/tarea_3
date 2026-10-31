@@ -1,0 +1,19 @@
+# Entorno
+.venv/
+.venv-reel/
+__pycache__/
+
+# CSV de la ONPE descomprimidos: se regeneran desde los zip con scripts/obtener_datos.py
+datos/originales/*.csv
+!datos/originales/ubigeo_distrito_aumentado.csv
+
+# Microdatos del INEI (sumaria ENAHO 2020): se descargan del portal
+datos/originales/enaho/
+
+# Grabaciones de voz: nunca se suben
+mi_voz*
+*.m4a
+*.ogg
+*.opus
+*.wav
+reel/fuentes/

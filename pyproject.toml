@@ -1,0 +1,16 @@
+[project]
+name = "tarea-3"
+version = "0.1.0"
+description = "Voto territorial en las Elecciones Generales 2021 del Perú: dashboard interactivo y reel con IA"
+readme = "README.md"
+authors = [
+    { name = "Frank Pinares", email = "102867236+saffron29@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "geopandas>=1.2.0",
+    "matplotlib>=3.11.2",
+    "openpyxl>=3.1.5",
+    "pandas>=3.1.0",
+    "requests>=2.34.2",
+]

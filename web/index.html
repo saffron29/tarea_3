@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El voto territorial de 2021</title>
+  <meta name="description" content="Dashboard interactivo de la primera y la segunda vuelta presidencial de 2021 en el Perú, por departamento, provincia y distrito (ONPE).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="assets/estilo.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.34.0/plotly.min.js"></script>
+</head>
+<body>
+  <header class="cabecera">
+    <div class="contenedor">
+      <p class="antetitulo">Elecciones Generales 2021 · Perú</p>
+      <h1>¿Dónde se decidió la elección de 2021?</h1>
+      <p class="pregunta"><strong>Pregunta de investigación:</strong> ¿cómo se distribuyó territorialmente el voto
+        presidencial de 2021 y qué cambió entre la primera y la segunda vuelta?</p>
+      <p class="contexto">En la primera vuelta (11 de abril de 2021) dieciocho candidatos se repartieron el voto y el
+        primero, Pedro Castillo, obtuvo menos de uno de cada cinco votos válidos. En la segunda vuelta (6 de junio)
+        Castillo superó a Keiko Fujimori por 44,263 votos según la proclamación del JNE, apenas 0.25 puntos
+        porcentuales de los votos válidos. Este tablero agrega los resultados de cada mesa por departamento, provincia
+        y distrito para explorar dónde ganó cada candidato y cómo se recompuso el voto entre ambas vueltas.</p>
+      <ul class="fichas">
+        <li><span>Cobertura</span>1,874 distritos del Perú y 77 países con electores en el extranjero</li>
+        <li><span>Periodo</span>Primera vuelta (11/04/2021) y segunda vuelta (06/06/2021)</li>
+        <li><span>Datos</span>86,488 mesas de votación por vuelta</li>
+        <li><span>Fuente</span><a href="https://www.datosabiertos.gob.pe/dataset/resultados-por-mesa-de-las-elecciones-generales-2021-oficina-nacional-de-procesos" target="_blank" rel="noopener">ONPE, resultados por mesa (Plataforma Nacional de Datos Abiertos)</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <nav class="controles" aria-label="Controles del tablero">
+    <div class="contenedor controles__fila">
+      <label class="control">
+        <span>1. Indicador</span>
+        <select id="sel-indicador"></select>
+      </label>
+      <label class="control">
+        <span>2. Territorio</span>
+        <select id="sel-territorio"></select>
+      </label>
+      <fieldset class="control control--nivel">
+        <legend>3. Nivel del mapa y del ranking</legend>
+        <div class="segmentado" id="sel-nivel">
+          <label><input type="radio" name="nivel" value="dep" checked><span>Departamento</span></label>
+          <label><input type="radio" name="nivel" value="prov"><span>Provincia</span></label>
+          <label><input type="radio" name="nivel" value="dist"><span>Distrito</span></label>
+        </div>
+      </fieldset>
+    </div>
+  </nav>
+
+  <main class="contenedor">
+    <p id="estado" class="estado">Cargando datos…</p>
+
+    <section aria-label="Indicadores clave" class="kpis" id="kpis">
+      <article class="kpi"><h2>Electores hábiles</h2><p class="kpi__valor" id="kpi-electores">–</p><p class="kpi__nota" id="kpi-electores-nota"></p></article>
+      <article class="kpi kpi--pl"><h2>Pedro Castillo · 2.ª vuelta</h2><p class="kpi__valor" id="kpi-pl">–</p><p class="kpi__nota" id="kpi-pl-nota"></p></article>
+      <article class="kpi kpi--fp"><h2>Keiko Fujimori · 2.ª vuelta</h2><p class="kpi__valor" id="kpi-fp">–</p><p class="kpi__nota" id="kpi-fp-nota"></p></article>
+      <article class="kpi"><h2>Margen de la 2.ª vuelta</h2><p class="kpi__valor" id="kpi-margen">–</p><p class="kpi__nota" id="kpi-margen-nota"></p></article>
+    </section>
+
+    <section class="rejilla">
+      <article class="panel panel--mapa">
+        <header><h2 id="titulo-mapa">Mapa</h2><p class="panel__nota" id="nota-mapa"></p></header>
+        <div id="grafico-mapa" class="grafico grafico--alto"></div>
+      </article>
+      <article class="panel">
+        <header><h2 id="titulo-ranking">Ranking</h2><p class="panel__nota" id="nota-ranking"></p></header>
+        <div id="grafico-ranking" class="grafico grafico--alto"></div>
+      </article>
+      <article class="panel">
+        <header><h2 id="titulo-dispersion">Pobreza y voto por distrito</h2><p class="panel__nota" id="nota-dispersion"></p></header>
+        <div id="grafico-dispersion" class="grafico"></div>
+      </article>
+      <article class="panel">
+        <header><h2 id="titulo-composicion">Primera vuelta</h2><p class="panel__nota" id="nota-composicion"></p></header>
+        <div id="grafico-composicion" class="grafico"></div>
+      </article>
+    </section>
+
+    <section class="texto" id="hallazgos">
+      <h2>Tres hallazgos</h2>
+      <div class="hallazgos">
+        <article class="hallazgo">
+          <p class="hallazgo__num">1</p>
+          <h3>Un país partido en dos</h3>
+          <p>Castillo ganó en <strong>16 de los 25 departamentos</strong> y en <strong>1,496 de los 1,874
+            distritos</strong> (80%), con su máximo en Puno (89.3% de los votos válidos). Fujimori ganó en Lima
+            (64.6%), Callao (67.4%), la costa norte (Tumbes, Piura, Lambayeque y La Libertad), Ica, Loreto y Ucayali.
+            Dentro del Perú, Castillo obtuvo <strong>152,157 votos más</strong>; el voto en el extranjero, donde Fujimori
+            alcanzó el 66.2%, redujo esa ventaja en 107,917 votos.</p>
+        </article>
+        <article class="hallazgo">
+          <p class="hallazgo__num">2</p>
+          <h3>De 18.9% a 50.1%: cómo se recompuso el voto</h3>
+          <p>Entre una vuelta y otra, Castillo multiplicó sus votos por <strong>3.2</strong> (de 2.72 a 8.84 millones)
+            y Fujimori por <strong>4.6</strong> (de 1.93 a 8.79 millones). En los distritos, el porcentaje de Fujimori
+            en la segunda vuelta sigue casi exactamente a la suma de Fujimori, López Aliaga y De Soto en la primera
+            (<strong>r = 0.93</strong>). Asimismo, los votos en blanco bajaron de 12.4% a 0.6% de los emitidos y la
+            participación subió de 70.0% a 74.6%.</p>
+        </article>
+        <article class="hallazgo">
+          <p class="hallazgo__num">3</p>
+          <h3>Más pobreza, más voto por Castillo</h3>
+          <p>En el 20% de distritos más pobres (pobreza monetaria 2018 de 49.5% o más), Castillo obtuvo el
+            <strong>78.0%</strong> de los votos válidos de la segunda vuelta; en el 20% menos pobre (hasta 18.3%), el
+            <strong>42.5%</strong>. La correlación entre la pobreza del distrito y su voto por Castillo es de
+            <strong>r = 0.44</strong>. Se trata de una asociación entre territorios, no de cómo votó cada persona.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="texto columnas">
+      <article>
+        <h2>Metodología</h2>
+        <ol>
+          <li>Se descargaron los resultados <strong>por mesa</strong> de ambas vueltas (86,488 mesas cada una) y se
+            agregaron por distrito, provincia y departamento.</li>
+          <li>Se limpiaron los datos: celdas vacías como cero votos, la «Ñ» dañada de la base de la segunda vuelta
+            (por ejemplo, «ESPA¿¿A») y la conversión del ubigeo de la ONPE (RENIEC) al del INEI, necesaria para unir
+            los mapas y la pobreza distrital.</li>
+          <li>Los porcentajes de cada candidato se calculan sobre los <strong>votos válidos</strong>, como lo hace la
+            ONPE; la participación, sobre los electores hábiles; los blancos y nulos, sobre los votos emitidos.</li>
+          <li>Se validaron los totales: la primera vuelta coincide exactamente con la ONPE (Castillo 2,724,752) y la
+            segunda difiere de la proclamación del JNE en 797 votos válidos (0.005%).</li>
+          <li>La pobreza distrital es la del Mapa de Pobreza Monetaria 2018 del INEI; la correlación (r de Pearson) se
+            calcula entre distritos, sin ponderar por electores.</li>
+        </ol>
+      </article>
+      <article>
+        <h2>Fuentes</h2>
+        <ul>
+          <li>ONPE: <a href="https://www.datosabiertos.gob.pe/dataset/resultados-por-mesa-de-las-elecciones-generales-2021-oficina-nacional-de-procesos" target="_blank" rel="noopener">resultados por mesa, Elecciones Generales 2021</a> y <a href="https://www.datosabiertos.gob.pe/dataset/resultados-por-mesa-de-la-segunda-elecci%C3%B3n-presidencial-2021-oficina-nacional-de-procesos" target="_blank" rel="noopener">Segunda Elección Presidencial 2021</a>.</li>
+          <li>JNE: Acta General de Proclamación (Resolución N.° 0750-2021-JNE), para validar los totales.</li>
+          <li>INEI: pobreza monetaria distrital 2018 e IDH 2019 (PNUD), compilados con la equivalencia de ubigeos de
+            <a href="https://github.com/jmcastagnetto/ubigeo-peru-aumentado" target="_blank" rel="noopener">ubigeo-peru-aumentado</a>.</li>
+          <li>INEI: sumaria de la ENAHO 2020, para la pobreza departamental (30.1% nacional).</li>
+          <li>Límites: <a href="https://github.com/juaneladio/peru-geojson" target="_blank" rel="noopener">peru-geojson</a> (los mismos del curso).</li>
+        </ul>
+      </article>
+      <article>
+        <h2>Limitaciones</h2>
+        <ul>
+          <li><strong>Falacia ecológica:</strong> que los distritos más pobres votaran más por Castillo no prueba que
+            las personas pobres lo hicieran.</li>
+          <li>La pobreza distrital es de 2018 y la elección, de 2021: la pandemia cambió la pobreza entre ambas fechas.</li>
+          <li>La base abierta de la segunda vuelta conserva 20 actas «en proceso»; por eso difiere levemente del
+            resultado proclamado.</li>
+          <li>48 distritos (2.0% de los electores), creados después de la cartografía o sin geometría en ella, no se
+            pintan en el mapa distrital, aunque sí cuentan en todas las cifras.</li>
+          <li>La participación se calcula sobre todas las mesas, incluidas las no instaladas.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Elaborado por <strong>Frank Pinares Gutiérrez</strong> · Tarea 3 del curso Python Intermedio para CCSS y
+        Gestión Pública (Q-LAB PUCP), 2026 · <a href="https://github.com/saffron29/tarea_3" target="_blank" rel="noopener">Código y datos en GitHub</a></p>
+      <p class="pie__ia">Declaración de uso de IA: el procesamiento, el tablero y el reel se desarrollaron con
+        asistencia de un agente de IA; las cifras se verificaron contra la ONPE, el JNE y el INEI.</p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

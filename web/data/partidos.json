@@ -1,0 +1,92 @@
+[
+ {
+  "sigla": "PNP",
+  "partido": "Partido Nacionalista Peruano",
+  "candidato": "Ollanta Humala"
+ },
+ {
+  "sigla": "FA",
+  "partido": "Frente Amplio",
+  "candidato": "Marco Arana"
+ },
+ {
+  "sigla": "PM",
+  "partido": "Partido Morado",
+  "candidato": "Julio Guzmán"
+ },
+ {
+  "sigla": "PPS",
+  "partido": "Perú Patria Segura",
+  "candidato": "Rafael Santos"
+ },
+ {
+  "sigla": "VN",
+  "partido": "Victoria Nacional",
+  "candidato": "George Forsyth"
+ },
+ {
+  "sigla": "AP",
+  "partido": "Acción Popular",
+  "candidato": "Yonhy Lescano"
+ },
+ {
+  "sigla": "AVP",
+  "partido": "Avanza País",
+  "candidato": "Hernando de Soto"
+ },
+ {
+  "sigla": "PP",
+  "partido": "Podemos Perú",
+  "candidato": "Daniel Urresti"
+ },
+ {
+  "sigla": "JP",
+  "partido": "Juntos por el Perú",
+  "candidato": "Verónika Mendoza"
+ },
+ {
+  "sigla": "PPC",
+  "partido": "Partido Popular Cristiano",
+  "candidato": "Alberto Beingolea"
+ },
+ {
+  "sigla": "FP",
+  "partido": "Fuerza Popular",
+  "candidato": "Keiko Fujimori"
+ },
+ {
+  "sigla": "UPP",
+  "partido": "Unión por el Perú",
+  "candidato": "José Vega"
+ },
+ {
+  "sigla": "RP",
+  "partido": "Renovación Popular",
+  "candidato": "Rafael López Aliaga"
+ },
+ {
+  "sigla": "RUNA",
+  "partido": "Renacimiento Unido Nacional",
+  "candidato": "Ciro Gálvez"
+ },
+ {
+  "sigla": "SP",
+  "partido": "Somos Perú",
+  "candidato": "Daniel Salaverry"
+ },
+ {
+  "sigla": "PL",
+  "partido": "Perú Libre",
+  "candidato": "Pedro Castillo"
+ },
+ {
+  "sigla": "DD",
+  "partido": "Democracia Directa",
+  "candidato": "Andrés Alcántara"
+ },
+ {
+  "sigla": "APP",
+  "partido": "Alianza para el Progreso",
+  "candidato": "César Acuña"
+ }
+]

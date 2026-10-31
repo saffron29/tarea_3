@@ -1,0 +1,75 @@
+{
+  "titulo": "¿Dónde se decidió 2021?",
+  "escenas": [
+    {
+      "frase": "El seis de junio de dos mil veintiuno, apenas cuarenta y cuatro mil doscientos sesenta y tres votos separaron a Pedro Castillo de Keiko Fujimori.",
+      "cifra": "44,263",
+      "etiqueta": "votos separaron a Castillo de Fujimori",
+      "cifra_en_texto": true,
+      "imagen": "recursos/r1_mapa_distritos.png",
+      "wer": 0.0
+    },
+    {
+      "frase": "En la primera vuelta compitieron dieciocho candidatos, y Castillo ganó con apenas el dieciocho coma nueve por ciento de los votos válidos.",
+      "cifra": "18.9%",
+      "etiqueta": "Castillo en primera vuelta, entre 18 candidatos",
+      "cifra_en_texto": true,
+      "imagen": "recursos/r2_primera_vuelta.png",
+      "wer": 0.045454545454545456
+    },
+    {
+      "frase": "En la segunda vuelta, Castillo ganó dieciséis de los veinticinco departamentos; Fujimori se impuso en Lima, el Callao y la costa norte.",
+      "cifra": "16 de 25",
+      "etiqueta": "departamentos ganados por Castillo",
+      "cifra_en_texto": true,
+      "imagen": "recursos/r3_departamentos.png",
+      "wer": 0.0
+    },
+    {
+      "frase": "En el extranjero fue al revés: Fujimori obtuvo el sesenta y seis coma dos por ciento y recortó más de cien mil votos.",
+      "cifra": "66.2%",
+      "etiqueta": "Fujimori entre los peruanos en el extranjero",
+      "cifra_en_texto": true,
+      "imagen": "recursos/r4_extranjero.png",
+      "wer": 0.043478260869565216
+    },
+    {
+      "frase": "Entre vueltas, Fujimori multiplicó sus votos por cuatro coma seis, y creció justo donde López Aliaga y De Soto habían sido fuertes.",
+      "cifra": "×4.6",
+      "etiqueta": "crecimiento de los votos de Fujimori",
+      "cifra_en_texto": true,
+      "imagen": "recursos/r5_transferencia.png",
+      "wer": 0.045454545454545456
+    },
+    {
+      "frase": "Y en el veinte por ciento de distritos más pobres, Castillo obtuvo el setenta y ocho por ciento de los votos válidos.",
+      "cifra": "78.0%",
+      "etiqueta": "Castillo en el 20% de distritos más pobres",
+      "cifra_en_texto": true,
+      "imagen": "recursos/r6_quintiles.png",
+      "wer": 0.0
+    },
+    {
+      "frase": "Los datos son de la ONPE, mesa por mesa. Explora tu distrito en mi tablero; el enlace está en la publicación.",
+      "cifra": "",
+      "etiqueta": "Explora el tablero: enlace en la publicación",
+      "cifra_en_texto": true,
+      "imagen": "recursos/r7_tablero.png",
+      "wer": 0.047619047619047616
+    }
+  ],
+  "hashtags": [
+    "CienciaDeDatos",
+    "Python",
+    "DatosAbiertos",
+    "Elecciones2021",
+    "Perú"
+  ],
+  "posts": {
+    "linkedin": "¿Dónde se decidió la elección presidencial de 2021? Con los resultados por mesa de la ONPE (86,488 mesas por vuelta) construí un dashboard interactivo que agrega el voto por departamento, provincia y distrito, y lo compara entre la primera y la segunda vuelta.\n\nDos hallazgos: Castillo ganó en 16 de los 25 departamentos y en 1,496 de los 1,874 distritos, mientras que Fujimori se impuso en Lima, el Callao, la costa norte y el extranjero, donde obtuvo el 66.2%. Además, en el 20% de distritos más pobres Castillo obtuvo el 78.0% de los votos válidos, frente al 42.5% en el 20% menos pobre; se trata de una asociación entre territorios, no de cómo votó cada persona.\n\nDashboard: https://saffron29.github.io/tarea_3/ · Código y datos: https://github.com/saffron29/tarea_3 · Tarea 3 del curso Python Intermedio para CCSS y Gestión Pública (Q-LAB PUCP). La voz del video fue generada con IA a partir de mi propia voz.",
+    "x": "¿Dónde se decidió 2021? Castillo ganó 16 de 25 departamentos; Fujimori, Lima, la costa norte y el extranjero (66.2%). Dashboard con datos de la ONPE: https://saffron29.github.io/tarea_3/ La voz del video fue generada con IA a partir de mi voz.",
+    "facebook": "¿Dónde se decidió la elección de 2021? Analicé los resultados de las 86,488 mesas de la ONPE: Castillo ganó en 16 de los 25 departamentos y Fujimori en Lima, el Callao, la costa norte y el extranjero (66.2%). En los distritos más pobres, Castillo llegó al 78.0%. Explora tu distrito en el dashboard: https://saffron29.github.io/tarea_3/ La voz del video fue generada con IA a partir de mi propia voz."
+  },
+  "cifras_dudosas_en_posts": [],
+  "revisado_a_mano": "Guion redactado con asistencia de IA a partir de texto_fuente.md; las 7 cifras pasaron la verificación de guion.py y el autor revisó y aprobó las frases, cifras e imágenes el 31/10/2026, sin cambios."
+}
